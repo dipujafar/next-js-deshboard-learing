@@ -5,22 +5,22 @@ import settingIcon from "/public/dashboard/icons/Setting.png"
 
 export const links = [
     {
-      key: "1",
+      key: "dashboard",
       icon: dashboardIcon,
       label: "Dashboard",
     },
     {
-      key: "2",
+      key: "account",
       icon: accIcon,
       label: "Accounts",
     },
     {
-      key: "3",
+      key: "add-doctor",
       icon: addDoctorIcon,
       label: "Add Doctors",
     },
     {
-      key: "4",
+      key: "setting",
       icon: settingIcon,
       label: "Settings",
     },

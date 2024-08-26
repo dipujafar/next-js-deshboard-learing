@@ -39,7 +39,7 @@ const LoginForm = () => {
           },
         ]}
       >
-        <Input type="email" placeholder="Example@gamil.com" />
+        <Input size="large" type="email" placeholder="Example@gamil.com" />
       </Form.Item>
 
       <Form.Item<FieldType>
@@ -47,7 +47,7 @@ const LoginForm = () => {
         label="Password"
         rules={[{ required: true, message: "Please input your password!" }]}
       >
-        <Input.Password placeholder="*******" />
+        <Input.Password size="large" placeholder="*******" />
       </Form.Item>
 
       <Form.Item<FieldType>

@@ -47,7 +47,7 @@ const ForgetPasswordForm = () => {
           },
         ]}
       >
-        <Input placeholder="Example@gamil.com" />
+        <Input size="large" placeholder="Example@gamil.com" />
       </Form.Item>
 
       <Form.Item style={{ display: "flex", justifyContent: "center" }}>

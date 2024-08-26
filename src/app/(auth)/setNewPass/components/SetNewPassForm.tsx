@@ -39,7 +39,7 @@ const SetNewPassForm = () => {
         name="newPass"
         rules={[{ required: true, message: "Please input your email!" }]}
       >
-        <Input.Password placeholder="*******" />
+        <Input.Password size="large" placeholder="*******" />
       </Form.Item>
 
       <Form.Item<FieldType>
@@ -47,7 +47,7 @@ const SetNewPassForm = () => {
         label="Confirm Password"
         rules={[{ required: true, message: "Please input your password!" }]}
       >
-        <Input.Password placeholder="*******" />
+        <Input.Password size="large" placeholder="*******" />
       </Form.Item>
 
       <Form.Item style={{ display: "flex", justifyContent: "center" }}>

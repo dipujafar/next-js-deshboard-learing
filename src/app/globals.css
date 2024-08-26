@@ -4,7 +4,9 @@
 
 .sidebar-menu > .ant-menu-item,
 .sidebar-menu .ant-menu-submenu {
-  @apply bg-[#4DB5AD] text-white ;
+  @apply bg-[#4DB5AD] text-primary-white ;
+
+  color: #fff !important;
 }
 
 
