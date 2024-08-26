@@ -1,11 +1,11 @@
 const antTheme = {
    token: {
-    colorPrimary: "#17ead9",
-    colorInfo: "#17ead9"
+    colorPrimary: "#4DB5AD",
+    colorInfo: "#4DB5AD"
   },
   components: {
     Form: {
-      labelColor: "#F8FAFC"
+      labelColor: "#4DB5AD"
     }
   }
 }

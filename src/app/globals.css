@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.sidebar-menu > .ant-menu-item,
+.sidebar-menu .ant-menu-submenu {
+  @apply bg-[#4DB5AD] text-white ;
+}
+
+
+.sidebar-menu .ant-menu-submenu {
+  @apply w-[97%] mx-auto;
+}
