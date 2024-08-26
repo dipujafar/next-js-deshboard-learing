@@ -4,6 +4,7 @@ import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { ConfigProvider} from "antd"
 import antTheme from "@/theme/AntTheme";
+import { Toaster } from "sonner";
 
 // custom fonts
 const roboto = Roboto({ 
@@ -41,6 +42,7 @@ export default function RootLayout({
         <AntdRegistry>
         <ConfigProvider theme={antTheme}>
         {children}
+        <Toaster></Toaster>
         </ConfigProvider>
         </AntdRegistry>
       </body>

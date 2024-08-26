@@ -14,13 +14,18 @@ const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (errorInfo) => {
 };
 
 const ForgetPasswordForm = () => {
-    const route = useRouter()
+    const route = useRouter();
+
+
+    //handle password change
     const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
         console.log("Success:", values);
+        
         if(values.email){
           route.push("/setNewPass")
         }
       };
+
   return (
     <Form
       name="basic"
