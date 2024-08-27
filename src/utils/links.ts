@@ -10,7 +10,7 @@ export const links = [
       label: "Dashboard",
     },
     {
-      key: "account",
+      key: "accounts",
       icon: accIcon,
       label: "Accounts",
     },

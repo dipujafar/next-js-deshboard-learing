@@ -105,15 +105,19 @@ type TDataType  = {
       dataIndex: 'type',
 
     },
+    {
+      title: 'Action',
+      dataIndex: 'action',
+
+    },
 
   ];
   
 
-
-const UserTable = () => {
+const AccTable = () => {
     return (
-        <DataTable columns={columns} data={data} pageSize={7}></DataTable>
+       <DataTable columns={columns} data={data} pageSize={10}></DataTable>
     );
 };
 
-export default UserTable;
+export default AccTable;
