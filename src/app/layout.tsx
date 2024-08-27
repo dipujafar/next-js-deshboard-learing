@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Kumbh_Sans } from "next/font/google";
+import { Roboto, Kumbh_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { ConfigProvider} from "antd"
@@ -14,10 +14,17 @@ const roboto = Roboto({
     display: "swap"
   });
 
+  const poppins = Poppins({
+    subsets: ["latin"],
+    weight: ["400","500","700"],
+    variable: "--font-poppins",
+    display: "swap"
+  })
+
   const kumbh_sans = Kumbh_Sans({ 
     subsets: ["latin"],
     weight: ["400", "600", "800"],
-    variable: "--kumbh_sans",
+    variable: "--kumbh-sans",
     display: "swap"
   });
 
@@ -38,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} ${kumbh_sans.variable}`}>
+      <body className={`${roboto.className} ${kumbh_sans.variable} ${poppins.variable}`}>
         <AntdRegistry>
         <ConfigProvider theme={antTheme}>
         {children}

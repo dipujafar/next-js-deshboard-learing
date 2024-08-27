@@ -38,7 +38,7 @@ const layout = ({ children }: { children: ReactNode }) => {
         </Link>
         <Menu
           theme="light"
-          defaultSelectedKeys={["1"]}
+          defaultSelectedKeys={["dashboard"]}
           mode="inline"
           className="sidebar-menu"
           items={links?.map((link)=>{
@@ -55,7 +55,7 @@ const layout = ({ children }: { children: ReactNode }) => {
           })}
         />
       </Sider>
-      <Layout style={{backgroundColor: "#4DB5AD"}}>
+      <Layout style={{}}>
         <Header style={{
              padding: 0, 
              backgroundColor: "#f8fafc",
@@ -65,23 +65,12 @@ const layout = ({ children }: { children: ReactNode }) => {
              paddingInline: "0"
               }}>
             <Navbar collapsed={collapsed} setCollapsed={setCollapsed}></Navbar>
-          {/* <Button
-            type="text"
-            icon={collapsed ? <MenuOutlined />: <MenuOutlined />}
-            onClick={() => setCollapsed(!collapsed)}
-            style={{
-              fontSize: "16px",
-              width: 64,
-              height: 64,
-            }}
-          /> */}
         </Header>
         <Content
           style={{
-            margin: "21px 32px",
-            padding: 24,
+            backgroundColor: "#4DB5AD",
+            padding: "21px 32px",
             minHeight: 280,
-            background: colorBgContainer,
             borderRadius: borderRadiusLG,
           }}
         >
