@@ -17,8 +17,10 @@ const config: Config = {
         "primary-white": "#F8FAFC",
         "primary-black": "#232323",
         "primary-color": "#4DB5AD",
+        "secondary-color": "#2B4E63",
         "black": "#1D242D",
-        "white": "#FDFDFD"
+        "white": "#FDFDFD",
+        
       }
     },
   },

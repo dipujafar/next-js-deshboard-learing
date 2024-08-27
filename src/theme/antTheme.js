@@ -9,6 +9,12 @@ const antTheme = {
     },
     Menu: {
       itemSelectedBg: "#2B4E63"
+    },
+    Table: {
+      headerBg: "rgb(43,78,99)",
+      headerColor: "rgb(253,253,253)",
+      cellFontSize: 18,
+       headerSplitColor: "rgb(43,78,99)"
     }
   }
 }
