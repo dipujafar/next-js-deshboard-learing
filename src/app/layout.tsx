@@ -23,7 +23,7 @@ const roboto = Roboto({
 
   const urbanist = Urbanist({
     subsets: ["latin"],
-    weight: ["400","500","600"],
+    weight: ["400","500","600", "700"],
     variable: "--font-urbanist",
     display: "swap"
   })

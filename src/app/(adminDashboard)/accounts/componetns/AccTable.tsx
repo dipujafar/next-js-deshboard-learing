@@ -68,14 +68,14 @@ type TDataType  = {
       name: "User 8",
       email: "email@gmail.com",
       date: "11 Oct, 2024",
-      type: "Coach",
+      type: "Patient",
     },
     {
       key: "9",
       name: "User 9",
       email: "email@gmail.com",
       date: "11 Oct, 2024",
-      type: "Guest",
+      type: "Doctor",
     },
     {
       key: "10",
@@ -174,6 +174,18 @@ const AccTable = () => {
       {
         title: 'Acc Type',
         dataIndex: 'type',
+       
+       filters: [
+        {
+          text: "Doctor",
+          value: "Doctor"
+        },
+        {
+          text: "Patient",
+          value: "Patient"
+        }
+       ],
+       onFilter: (value, record)=> record.type.indexOf(value as string) == 0 
   
       },
       {

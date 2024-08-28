@@ -1,14 +1,10 @@
-import { TStateProps } from "@/types/utilsTypes";
-import { Button, Modal } from "antd";
-import Image from "next/image";
-import profileImg from "@/assets/image/profileImg.png";
+import { TStateProps } from '@/types/utilsTypes';
+import { Button, Modal } from 'antd';
+import React from 'react';
 
-const ProfileModal = ({
-  state: open,
-  setState: setOpen,
-}: TStateProps<boolean>) => {
-  return (
-    <Modal
+const DoctorModal = ({state: open, setState: setOpen}: TStateProps<boolean>) => {
+    return (
+        <Modal
       open={open}
       footer={null}
       centered={true}
@@ -20,11 +16,6 @@ const ProfileModal = ({
       <div>
         <div className="flex gap-12 p-7">
           <div className="flex flex-col justify-center items-center gap-4">
-            <Image
-              src={profileImg}
-              alt="profileImage"
-              className="rounded-full h-[144px] w-[144px]"
-            ></Image>
             <h1 className="text-center text-2xl font-medium">Patients</h1>
             <div className="flex gap-2">
               <p>Age: 42</p>
@@ -51,7 +42,7 @@ const ProfileModal = ({
         <Button style={{width: "100%", height: "48px"}} size="large" danger>Delete User</Button>
       </div>
     </Modal>
-  );
+    );
 };
 
-export default ProfileModal;
+export default DoctorModal;
