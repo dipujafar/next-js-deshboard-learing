@@ -30,7 +30,7 @@ const roboto = Roboto({
 
   const kumbh_sans = Kumbh_Sans({ 
     subsets: ["latin"],
-    weight: ["400", "600", "800"],
+    weight: ["400","500","600", "700"],
     variable: "--font-kumbh-sans",
     display: "swap"
   });

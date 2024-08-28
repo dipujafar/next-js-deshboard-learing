@@ -1,6 +1,9 @@
 "use client"
 import DataTable from "@/components/DataTable";
 import { TableProps } from "antd";
+import { useState } from "react";
+import { IoEyeOutline } from "react-icons/io5";
+import ProfileModal from "./ProfileModal";
 
 type TDataType  = {
     key: string;
@@ -9,6 +12,7 @@ type TDataType  = {
     date: string;
     type: string;
   }
+  //user data
   const data: TDataType[] = [
     {
       key: "1",
@@ -78,45 +82,117 @@ type TDataType  = {
       name: "User 10",
       email: "email@gmail.com",
       date: "11 Oct, 2024",
+      type: "Patient",
+    },
+    {
+      key: "11",
+      name: "User 10",
+      email: "email@gmail.com",
+      date: "11 Oct, 2024",
       type: "Doctor",
+    },
+    {
+      key: "12",
+      name: "User 10",
+      email: "email@gmail.com",
+      date: "11 Oct, 2024",
+      type: "Patient",
+    },
+    {
+      key: "13",
+      name: "User 10",
+      email: "email@gmail.com",
+      date: "11 Oct, 2024",
+      type: "Doctor",
+    },
+    {
+      key: "14",
+      name: "User 10",
+      email: "email@gmail.com",
+      date: "11 Oct, 2024",
+      type: "Patient",
+    },
+    {
+      key: "15",
+      name: "User 10",
+      email: "email@gmail.com",
+      date: "11 Oct, 2024",
+      type: "Patient",
+    },
+    {
+      key: "16",
+      name: "User 10",
+      email: "email@gmail.com",
+      date: "11 Oct, 2024",
+      type: "Patient",
+    },
+    {
+      key: "17",
+      name: "User 10",
+      email: "email@gmail.com",
+      date: "11 Oct, 2024",
+      type: "Patient",
+    },
+    {
+      key: "18",
+      name: "User 10",
+      email: "email@gmail.com",
+      date: "11 Oct, 2024",
+      type: "Patient",
     },
   ];
   
-  const columns: TableProps< TDataType>['columns'] = [
-    {
-      title: 'Serial',
-      dataIndex: 'key',
-      render: (value) => `#${value}`,
-    },
-    {
-      title: 'Name',
-      dataIndex: 'name',
-    },
-    {
-      title: 'Email',
-      dataIndex: 'email',
-    },
-    {
-      title: 'Date',
-      dataIndex: 'date',
-    },
-    {
-      title: 'Acc Type',
-      dataIndex: 'type',
 
-    },
-    {
-      title: 'Action',
-      dataIndex: 'action',
-
-    },
-
-  ];
   
 
 const AccTable = () => {
+  const [profileModel,setProfileModel] = useState(false);
+  
+  const handleProfileModal = ()=>{
+    setProfileModel(true);
+  }
+
+    // columns info
+    const columns: TableProps< TDataType>['columns'] = [
+      {
+        title: 'Serial',
+        dataIndex: 'key',
+        render: (value) => `#${value}`,
+      },
+      {
+        title: 'Name',
+        dataIndex: 'name',
+      },
+      {
+        title: 'Email',
+        dataIndex: 'email',
+      },
+      {
+        title: 'Date',
+        dataIndex: 'date',
+      },
+      {
+        title: 'Acc Type',
+        dataIndex: 'type',
+  
+      },
+      {
+        title: 'Action',
+        dataIndex: 'action',
+        render: () =>(
+          <div>
+            <IoEyeOutline size={26} onClick={handleProfileModal}></IoEyeOutline>
+          </div>
+        )
+      },
+  
+    ];
+
     return (
-       <DataTable columns={columns} data={data} pageSize={10}></DataTable>
+      <div>
+       <DataTable columns={columns} data={data} pageSize={16}></DataTable>
+       <ProfileModal state={profileModel} setState={setProfileModel}></ProfileModal>
+       </div>
     );
 };
 

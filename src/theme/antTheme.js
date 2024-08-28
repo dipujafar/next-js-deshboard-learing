@@ -8,7 +8,8 @@ const antTheme = {
       labelColor: "#F8FAFC"
     },
     Menu: {
-      itemSelectedBg: "#2B4E63"
+      itemSelectedBg: "#2B4E63",
+      itemHoverBg: "rgb(43,78,99)"
     },
     Table: {
       headerBg: "rgb(43,78,99)",

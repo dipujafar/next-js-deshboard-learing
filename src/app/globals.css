@@ -24,3 +24,7 @@
 .sidebar-menu .ant-menu-submenu {
   @apply w-[97%] mx-auto;
 }
+
+.ant-modal * {
+  font-family: var(--font-kumbh-sans);
+}

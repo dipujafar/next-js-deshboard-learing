@@ -7,6 +7,7 @@ type TNavbarProps = {
   collapsed: boolean;
   setCollapsed: (collapsed: boolean) => void;
 };
+
 const Navbar = ({ collapsed, setCollapsed }: TNavbarProps) => {
   return (
     <div className="flex items-center justify-between w-[97%] font-poppins">

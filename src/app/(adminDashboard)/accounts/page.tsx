@@ -2,7 +2,7 @@ import AccTable from "./componetns/AccTable";
 
 const page = () => {
     return (
-        <div>
+        <div className="max-h-screen">
            <AccTable></AccTable>
         </div>
     );
