@@ -112,7 +112,7 @@ type TDataType  = {
 
 const UserTable = () => {
     return (
-        <DataTable columns={columns} data={data} pageSize={7}></DataTable>
+        <DataTable columns={columns} data={data} pageSize={4}></DataTable>
     );
 };
 

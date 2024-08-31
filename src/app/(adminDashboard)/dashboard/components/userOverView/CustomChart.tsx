@@ -90,13 +90,12 @@ const TopRoundedBar = (props) => {
 
 
 const CustomChart = () => {
-    
     return (
       <div style={{
         width: "100%",
         height: "100%"
       }} >
-     <ResponsiveContainer width="100%" height={350}>
+     <ResponsiveContainer width="100%" height={300}>
         <BarChart
           width={500}
           height={300}

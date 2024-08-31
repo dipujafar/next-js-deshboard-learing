@@ -4,7 +4,7 @@ import CustomChart from "./CustomChart";
 
 const UserOverView = () => {
   return (
-    <div className="bg-primary-white p-2 rounded space-y-7">
+    <div className="bg-primary-white p-2 rounded space-y-5">
       {/* header  */}
       <div className="flex justify-between">
         <div className="flex items-center gap-5 font-urbanist">

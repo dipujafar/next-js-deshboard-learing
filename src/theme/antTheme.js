@@ -14,7 +14,7 @@ const antTheme = {
     Table: {
       headerBg: "rgb(43,78,99)",
       headerColor: "rgb(253,253,253)",
-      cellFontSize: 18,
+      cellFontSize: 15,
       headerSplitColor: "rgb(43,78,99)",
     },
   },

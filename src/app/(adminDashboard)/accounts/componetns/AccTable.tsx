@@ -202,7 +202,7 @@ const AccTable = () => {
 
     return (
       <div>
-       <DataTable columns={columns} data={data} pageSize={16}></DataTable>
+       <DataTable columns={columns} data={data} pageSize={12}></DataTable>
        <ProfileModal state={profileModel} setState={setProfileModel}></ProfileModal>
        </div>
     );
