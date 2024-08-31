@@ -3,7 +3,8 @@ import doctorImag from "@/assets/image/doctorImg.png"
 import { Button } from "antd";
 import detailsIcon from "@/assets/icons/details.png"
 
-const DoctorCard = () => {
+// @ts-ignore
+const DoctorCard = ({doctor}) => {
     return (
         <div className="flex gap-4 font-urbanist p-4 border border-[#C8E8E6]">
             <div>

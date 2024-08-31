@@ -17,6 +17,10 @@ const antTheme = {
       cellFontSize: 15,
       headerSplitColor: "rgb(43,78,99)",
     },
+    Pagination: {
+      itemActiveBg: "rgb(77,181,173)",
+      colorBorder: "rgb(77,181,173)",
+    },
   },
 };
 

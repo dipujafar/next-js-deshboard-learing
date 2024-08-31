@@ -4,7 +4,7 @@ import UserTable from "./components/userOverView/UserTable";
 
 const page = () => {
     return (
-        <div className="space-y-5">
+        <div className=" space-y-5">
            <Statatistic></Statatistic>
            <UserOverView></UserOverView>
            <div style={{fontFamily: "var(--font-kumbh-sans)"}}>
