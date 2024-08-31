@@ -9,8 +9,6 @@ const AllDoctors = () => {
     
     // Mock data for doctors
     const doctorsData = Array.from({ length: 20 }, (_, index) => ({ id: index, name: `Doctor ${index + 1}` }));
-    console.log(doctorsData);
-    
 
     // Calculate start and end index for slicing the doctors data based on the current page and page size
     const startIndex = (currentPage - 1) * pageSize;

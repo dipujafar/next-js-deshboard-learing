@@ -1,17 +1,23 @@
-import { Avatar, Badge, Button, Flex, Space } from "antd";
+import { Avatar, Badge, Button, Divider, Dropdown, Flex, Space } from "antd";
 import { FaBars } from "react-icons/fa6";
 import { IoNotificationsOutline } from "react-icons/io5";
 import avatarImg from "@/assets/image/Ellipse 86.png";
+import NotificationModal from "./NotificationModal";
 
 type TNavbarProps = {
   collapsed: boolean;
   setCollapsed: (collapsed: boolean) => void;
 };
 
+
+
+
+
 const Navbar = ({ collapsed, setCollapsed }: TNavbarProps) => {
+ 
   return (
     <div className="flex items-center justify-between w-[97%] font-poppins">
-      {/* herder left side  */}
+      {/* Header left side */}
       <Flex align="center" gap={8}>
         <button
           onClick={() => setCollapsed(!collapsed)}
@@ -22,12 +28,19 @@ const Navbar = ({ collapsed, setCollapsed }: TNavbarProps) => {
         <h2 className="text-3xl text-primary-black font-medium">Dashboard</h2>
       </Flex>
 
-      {/* header right side */}
+      {/* Header right side */}
       <Flex align="center" gap={16}>
-        <div className="flex items-center justify-center size-12 bg-primary-color rounded-full">
-          <Badge count={1} style={{border: "none", boxShadow: "none"}}>
-          <IoNotificationsOutline size={24} color="#fff" />
-          </Badge>
+        {/* Notification */}
+        <div className="flex justify-center items-center size-12 bg-primary-color rounded-full">
+          <Dropdown
+            overlay={NotificationModal} // Use the menu prop instead of overlay
+            placement="bottomRight"
+            trigger={["click"]}
+          >
+            <Badge count={1} style={{ border: "none", boxShadow: "none" }}>
+              <IoNotificationsOutline size={24} color="#fff" />
+            </Badge>
+          </Dropdown>
         </div>
 
         <Button

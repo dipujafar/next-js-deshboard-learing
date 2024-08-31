@@ -17,7 +17,7 @@ const layout = ({ children }: { children: ReactNode }) => {
   } = theme.useToken();
 
   return (
-    <Layout style={{ height: "100vh" }}>
+    <Layout style={{ height: "100vh", overflow: "auto" }}>
       <Sider width={350} theme="light" trigger={null} collapsible collapsed={collapsed}
       style={{
         paddingInline: `${collapsed? "10px": "26px"}`,

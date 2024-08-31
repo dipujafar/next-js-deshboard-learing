@@ -11,9 +11,15 @@ import {
   Upload,
 } from "antd";
 import TextArea from "antd/es/input/TextArea";
-import React from "react";
+import moment from "moment";
+import Image from "next/image";
+import profileImg from "@/assets/image/defaultProfileImg.png";
+import { MdOutlineEdit } from "react-icons/md";
+import dayjs from "dayjs";
 
-const DoctorModal = ({
+
+
+const DoctorDetaisModal = ({
   state: open,
   setState: setOpen,
 }: TStateProps<boolean>) => {
@@ -63,7 +69,12 @@ const DoctorModal = ({
               maxWidth: 500,
               marginTop: "25px",
             }}
+            initialValues={{title: "Pro.Dr", name: "Dr. Maria Waston", dob: dayjs(new Date('2024-08-31')), experience: "1"}}
           >
+            <div className="flex justify-center rounded-full">
+            <Image src={profileImg} alt="defaultImage" className="rounded-full size-28"></Image>
+            </div>
+
             {/* image upload  */}
             <Form.Item
               name="doctorImg"
@@ -73,9 +84,9 @@ const DoctorModal = ({
               }
               style={{
                 textAlign: "center",
-                border: "2px dashed #D9D9D9",
-                paddingBlock: "20px",
-                borderRadius: "10px",
+                position: "relative",
+                bottom: "35px",
+                left: "40px",
               }}
             >
               <Upload
@@ -83,30 +94,31 @@ const DoctorModal = ({
                 listType="picture"
                 beforeUpload={() => false}
               >
-                <Button icon={<UploadOutlined />}>Upload Doctor Image</Button>
+                <div className="bg-[#2B4E63] p-1 rounded">
+               <MdOutlineEdit size={20} className="text-white " />
+               </div>
               </Upload>
             </Form.Item>
 
             {/*  input  title */}
-            <Form.Item label="Title" name="title"  rules={[{ required: true, message: "Please enter soctor title" }]}>
-              <Input size="large" placeholder="Enter Doctor Title"></Input>
+            <Form.Item label="Title" name="title">
+              <Input name="title" size="large"  placeholder="Enter Doctor Title"></Input>
             </Form.Item>
 
             {/* input  name  */}
-            <Form.Item label="First & Last name" name="name"  rules={[{ required: true, message: "Please enter doctor name" }]}>
-              <Input size="large" placeholder="Enter Doctor Name"></Input>
+            <Form.Item label="First & Last name" name="name">
+              <Input size="large" defaultValue={"Dr. Maria Waston"} placeholder="Enter Doctor Name"></Input>
             </Form.Item>
 
             {/* input  Date of birth input  */}
-            <Form.Item label="Date of birth" name="dob"  rules={[{ required: true, message: "Please select date of brith" }]}>
-              <DatePicker />
+            <Form.Item label="Date of birth" name="dob">
+              <DatePicker/>
             </Form.Item>
 
             {/* input  Experience  */}
             <Form.Item
               label="Experience"
               name="experience"
-              rules={[{ required: true, message: "Please select a value" }]}
             >
               <Select placeholder="Select Experience">
                 <Option value="0">0</Option>
@@ -119,7 +131,7 @@ const DoctorModal = ({
             </Form.Item>
 
             {/* input  About Doctor */}
-            <Form.Item label="First & Last name" name="name">
+            <Form.Item label="About Doctor" name="aboutDoc">
               <TextArea rows={3}></TextArea>
             </Form.Item>
 
@@ -133,7 +145,7 @@ const DoctorModal = ({
               }}
               size="large"
             >
-              Add
+              Save
             </Button>
           </Form>
         </div>
@@ -142,4 +154,4 @@ const DoctorModal = ({
   );
 };
 
-export default DoctorModal;
+export default DoctorDetaisModal;
