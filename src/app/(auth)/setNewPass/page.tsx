@@ -4,8 +4,8 @@ import SetNewPassForm from "./components/SetNewPassForm";
 
 
 export const metadata: Metadata = {
-  title: "Login",
-  description: "Fetal med&C Login",
+  title: "Set New Password",
+  description: "Securely set a new password for your Fetal Med&C account. Ensure your access to important healthcare services and medical information remains protected by updating your credentials."
 };
 
 const page = () => {

@@ -40,7 +40,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title:{
     default: "Home | Fetal",
-    template: "%s | Fetal"
+    template: "%s | Fetal Mad&C"
   },
   description: "This is Official Application for Fetal Med&C",
 };

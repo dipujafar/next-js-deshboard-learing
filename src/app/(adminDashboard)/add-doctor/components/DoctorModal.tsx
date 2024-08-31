@@ -77,7 +77,7 @@ const DoctorModal = ({state: open, setState: setOpen}: TStateProps<boolean>) => 
 
           {/* input  name  */}
           <Form.Item label="First & Last name" name="name">
-            <Input size='large' placeholder='Enter Doctor Name'></Input>
+            <Input  size='large' placeholder='Enter Doctor Name'></Input>
           </Form.Item>
 
           {/* input  Date of birth input  */}
@@ -87,7 +87,7 @@ const DoctorModal = ({state: open, setState: setOpen}: TStateProps<boolean>) => 
 
           {/* input  Experience  */}
           <Form.Item label="Experience" name="experience" rules={[{ required: true, message: "Please select a value" }]}>
-          <Select placeholder="Select Experience">
+          <Select  placeholder="Select Experience">
             <Option value="0">0</Option>
             <Option value="1">1</Option>
             <Option value="2">2</Option>
@@ -102,9 +102,8 @@ const DoctorModal = ({state: open, setState: setOpen}: TStateProps<boolean>) => 
                 <TextArea rows={3}></TextArea>
           </Form.Item>
 
-          <Button htmlType='submit' style={{width: "100%", height: "48px", backgroundColor: "#2B4E63", color: "#fff"}} size="large" >Save</Button>
+          <Button htmlType='submit' style={{width: "100%", height: "48px", backgroundColor: "#2B4E63", color: "#fff"}} size="large" >Add</Button>
         </Form>
-       
       </div>
     </Modal>
     </ConfigProvider>

@@ -3,8 +3,8 @@ import React from "react";
 import LoginForm from "./component/LoginForm";
 
 export const metadata: Metadata = {
-  title: "Login",
-  description: "Fetal med&C Login",
+  title: "Admin Login",
+  description: "Admin login for Fetal Med&C. Access the secure portal to manage healthcare services, oversee patient records, and administer fetal medicine and care operations."
 };
 
 const page = () => {

@@ -6,11 +6,9 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "/public/logo.png";
 import { links } from "@/utils/links";
-import Navbar from "./components/Navbar";
+import Navbar from "../../components/Navbar";
 
 const { Header, Sider, Content } = Layout;
-
-
 
 const layout = ({ children }: { children: ReactNode }) => {
   const [collapsed, setCollapsed] = useState(false);

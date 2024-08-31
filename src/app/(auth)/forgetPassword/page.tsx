@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import ForgetPasswordForm from "./components/ForgetPasswordForm";
 
 export const metadata: Metadata = {
-    title: "Forget Pass",
-    description: "Forget Password",
+    title: "Forget Password",
+    description: "Reset your password for Fetal Med&C to securely access your account. Follow the instructions to regain access to your healthcare portal and stay connected with your fetal medicine and care services.",
   };
   
 
