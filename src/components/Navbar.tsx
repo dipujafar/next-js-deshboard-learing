@@ -4,6 +4,8 @@ import { IoNotificationsOutline } from "react-icons/io5";
 import avatarImg from "@/assets/image/Ellipse 86.png";
 import NotificationModal from "./NotificationModal";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import customPathName from "@/utils/customPathName";
 
 type TNavbarProps = {
   collapsed: boolean;
@@ -15,6 +17,8 @@ type TNavbarProps = {
 
 
 const Navbar = ({ collapsed, setCollapsed }: TNavbarProps) => {
+  const pathName = usePathname();
+  const dynamicPathName = customPathName(pathName);
  
   return (
     <div className="flex items-center justify-between w-[97%] font-poppins">
@@ -26,7 +30,7 @@ const Navbar = ({ collapsed, setCollapsed }: TNavbarProps) => {
         >
           <FaBars size={28} />
         </button>
-        <h2 className="text-3xl text-primary-black font-medium">Dashboard</h2>
+        <h2 className="text-3xl text-primary-black font-medium">{dynamicPathName}</h2>
       </Flex>
 
       {/* Header right side */}

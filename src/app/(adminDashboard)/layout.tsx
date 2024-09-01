@@ -1,5 +1,4 @@
 "use client";
-
 import { ReactNode, useState } from "react";
 import { Layout, Menu, theme } from "antd";
 import Link from "next/link";
@@ -18,51 +17,114 @@ const layout = ({ children }: { children: ReactNode }) => {
 
   return (
     <Layout style={{ height: "100vh", overflow: "auto" }}>
-      <Sider width={320} theme="light" trigger={null} collapsible collapsed={collapsed}
-      style={{
-        paddingInline: `${collapsed? "10px": "26px"}`,
-        backgroundColor: "#F8FAFC",
-        maxHeight: "100vh",
-        overflow: "auto",
-
-      }}>
+      <Sider
+        width={320}
+        theme="light"
+        trigger={null}
+        collapsible
+        collapsed={collapsed}
+        style={{
+          paddingInline: `${collapsed ? "10px" : "26px"}`,
+          backgroundColor: "#F8FAFC",
+          maxHeight: "100vh",
+          overflow: "auto",
+        }}
+      >
         <div className="demo-logo-vertical" />
         {/* logo  */}
         <Link href={"/"}>
-          <Image src={logo} alt="logo_Image" style={{
-            marginTop: "79px",
-            marginBottom: "40px"
-          }}/>
+          <Image
+            src={logo}
+            alt="logo_Image"
+            style={{
+              marginTop: "79px",
+              marginBottom: "40px",
+            }}
+          />
         </Link>
         <Menu
           theme="light"
           defaultSelectedKeys={["dashboard"]}
           mode="inline"
           className="sidebar-menu"
-          items={links?.map((link)=>{
-            let manuItem;
+          items={links?.map((link) => {
+            let menuItem;
 
-            manuItem = {
+            if (!Array.isArray(link)) {
+              menuItem = {
                 key: link.key,
-                icon: <Image src={link.icon} alt={link.label}></Image>,
-                label: <Link href={link.key}>{link.label}</Link>
-                
-            }
-            return manuItem
+                icon: (
+                  <Image
+                    src={link.icon}
+                    alt={link.label}
+                    className={`${
+                      collapsed ? "w-full mr-0" : "w-autor h-auto m-2"
+                    }`}
+                  />
+                ),
+                label: (
+                  <Link href={`/${link.key}`} className={`text-lg`}>
+                    {link.label}
+                  </Link>
+                ),
+              };
+            } else {
+              menuItem = {
+                key: link[0].key,
+                label: <p className="text-lg text-white">{link[0].label}</p>,
+                icon: (
+                  <Image
+                    src={link[0].icon}
+                    alt={link[0].label}
+                    className={`${
+                      collapsed ? "w-full mr-0" : "w-auto h-auto mr-2"
+                    }`}
+                  />
+                ),
+                children: link.slice(1, link.length).map((subLink) => {
+                  let subMenuItem;
+                  subMenuItem = {
+                    key: subLink.key,
+                    icon: (
+                      <Image
+                        src={subLink.icon}
+                        alt={subLink.label}
+                        className={`${
+                          collapsed ? "w-8 h-8 mr-0" : "w-auto h-auto mr-2"
+                        } bg-blend-soft-light`}
+                      />
+                    ),
+                    label: (
+                      <Link
+                        href={`/${subLink.key}`}
+                        className="text-lg "
+                        style={{ color: "white" }}
+                      >
+                        {subLink.label}
+                      </Link>
+                    ),
+                  };
 
+                  return subMenuItem;
+                }),
+              };
+            }
+            return menuItem;
           })}
         />
       </Sider>
       <Layout style={{}}>
-        <Header style={{
-             padding: 0, 
-             backgroundColor: "#f8fafc",
-             height: "80px",
-             display: "flex",
-             alignItems: "center",
-             paddingInline: "0"
-              }}>
-            <Navbar collapsed={collapsed} setCollapsed={setCollapsed}></Navbar>
+        <Header
+          style={{
+            padding: 0,
+            backgroundColor: "#f8fafc",
+            height: "80px",
+            display: "flex",
+            alignItems: "center",
+            paddingInline: "0",
+          }}
+        >
+          <Navbar collapsed={collapsed} setCollapsed={setCollapsed}></Navbar>
         </Header>
         <Content
           style={{
@@ -70,7 +132,7 @@ const layout = ({ children }: { children: ReactNode }) => {
             padding: "21px 32px",
             minHeight: 280,
             borderRadius: borderRadiusLG,
-            overflow: "auto"
+            overflow: "auto",
           }}
         >
           {children}
