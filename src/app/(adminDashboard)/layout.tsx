@@ -18,7 +18,7 @@ const layout = ({ children }: { children: ReactNode }) => {
 
   return (
     <Layout style={{ height: "100vh", overflow: "auto" }}>
-      <Sider width={350} theme="light" trigger={null} collapsible collapsed={collapsed}
+      <Sider width={320} theme="light" trigger={null} collapsible collapsed={collapsed}
       style={{
         paddingInline: `${collapsed? "10px": "26px"}`,
         backgroundColor: "#F8FAFC",
@@ -70,6 +70,7 @@ const layout = ({ children }: { children: ReactNode }) => {
             padding: "21px 32px",
             minHeight: 280,
             borderRadius: borderRadiusLG,
+            overflow: "auto"
           }}
         >
           {children}
