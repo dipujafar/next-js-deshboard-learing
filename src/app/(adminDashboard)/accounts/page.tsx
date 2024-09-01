@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const page = () => {
     return (
-        <div className="min-h-screen bg-[#F8FAFC] overflow-auto">
+        <div className="">
            <AccTable></AccTable>
         </div>
     );

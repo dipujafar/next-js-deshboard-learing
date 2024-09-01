@@ -3,6 +3,7 @@ import { FaBars } from "react-icons/fa6";
 import { IoNotificationsOutline } from "react-icons/io5";
 import avatarImg from "@/assets/image/Ellipse 86.png";
 import NotificationModal from "./NotificationModal";
+import Link from "next/link";
 
 type TNavbarProps = {
   collapsed: boolean;
@@ -29,20 +30,22 @@ const Navbar = ({ collapsed, setCollapsed }: TNavbarProps) => {
       </Flex>
 
       {/* Header right side */}
-      <Flex align="center" gap={16}>
+      <Flex  align="center" gap={16}>
         {/* Notification */}
-        <div className="flex justify-center items-center size-12 bg-primary-color rounded-full">
-          <Dropdown
+        <Dropdown
             overlay={NotificationModal} // Use the menu prop instead of overlay
             placement="bottomRight"
             trigger={["click"]}
           >
-            <Badge count={1} style={{ border: "none", boxShadow: "none" }}>
-              <IoNotificationsOutline size={24} color="#fff" />
+        <div className="flex justify-center items-center size-12 bg-primary-color rounded-full cursor-pointer">
+          
+            <Badge count={1}  style={{ border: "none", boxShadow: "none" }}>
+              <IoNotificationsOutline size={24} color="#fff"  />
             </Badge>
-          </Dropdown>
         </div>
+        </Dropdown>
 
+        <Link href={"/profile"} className="flex items-center">
         <Button
           style={{
             border: "none",
@@ -50,9 +53,10 @@ const Navbar = ({ collapsed, setCollapsed }: TNavbarProps) => {
             backgroundColor: "transparent",
           }}
         >
-          <Avatar src={avatarImg.src} size={44}></Avatar>
+          <Avatar src={avatarImg.src} size={48}></Avatar>
           <p className="text-lg font-semibold">Akash</p>
         </Button>
+        </Link>
       </Flex>
     </div>
   );

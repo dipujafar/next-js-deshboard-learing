@@ -11,7 +11,7 @@ import {
   Upload,
 } from "antd";
 import TextArea from "antd/es/input/TextArea";
-import React from "react";
+
 
 const DoctorModal = ({
   state: open,

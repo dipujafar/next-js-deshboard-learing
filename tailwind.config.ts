@@ -20,7 +20,6 @@ const config: Config = {
         "secondary-color": "#2B4E63",
         "black": "#1D242D",
         "white": "#FDFDFD",
-        
       }
     },
   },
