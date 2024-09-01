@@ -1,4 +1,5 @@
-import TextEditor from "../../../utils/TextEditor";
+import TextEditor from "@/components/TextEditor";
+
 
 
 

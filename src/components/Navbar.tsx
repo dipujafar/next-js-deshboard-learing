@@ -7,6 +7,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import customPathName from "@/utils/customPathName";
 
+
 type TNavbarProps = {
   collapsed: boolean;
   setCollapsed: (collapsed: boolean) => void;

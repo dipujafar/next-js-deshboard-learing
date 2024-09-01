@@ -2,6 +2,8 @@ import dashboardIcon from "@/assets/image/Category.png";
 import accIcon from "/public/dashboard/icons/3 User.png";
 import addDoctorIcon from "/public/dashboard/icons/addDoctor.png";
 import settingIcon from "/public/dashboard/icons/Setting.png";
+import termsIcon from "/public/dashboard/icons/terms.png"
+import policyIcon from "/public/dashboard/icons/policy.png"
 
 export const links = [
   {
@@ -27,12 +29,12 @@ export const links = [
     },
     {
       key: "terms-condition",
-      icon: settingIcon,
+      icon: termsIcon,
       label: "Terms & Condition",
     },
     {
       key: "privacy-policy",
-      icon: settingIcon,
+      icon: policyIcon,
       label: "Privacy Policy",
     },
   ],
