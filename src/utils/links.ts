@@ -31,7 +31,7 @@ export const links = [
       label: "Terms & Condition",
     },
     {
-      key: "privacy policy",
+      key: "privacy-policy",
       icon: settingIcon,
       label: "Privacy Policy",
     },

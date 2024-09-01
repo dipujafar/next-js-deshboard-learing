@@ -1,11 +1,9 @@
 /* custom font  */
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 :root {
   --font-poppins: "Poppins", sans-serif;
@@ -15,11 +13,10 @@
 
 .sidebar-menu > .ant-menu-item,
 .sidebar-menu .ant-menu-submenu {
-  @apply bg-[#4DB5AD] text-primary-white ;
+  @apply bg-[#4DB5AD] text-primary-white;
 
   color: #fff !important;
 }
-
 
 .sidebar-menu .ant-menu-submenu {
   @apply w-[97%] mx-auto;
@@ -27,4 +24,24 @@
 
 .ant-modal * {
   font-family: var(--font-kumbh-sans);
+}
+
+.ql-toolbar {
+  margin-bottom: 12px !important;
+  display: flex;
+  justify-content: end;
+  border: none !important;
+}
+
+.ql-formats {
+  background-color: white;
+  border-radius: 3px;
+}
+
+.ql-container {
+  background-color: white;
+  height: 650px !important;
+  border: none !important;
+  border-radius: 10px;
+  overflow: auto !important;
 }
