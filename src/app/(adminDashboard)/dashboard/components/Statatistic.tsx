@@ -26,7 +26,7 @@ const Statatistic = () => {
         </div>
         <div className="text-black">
           <h1 className="text-2xl font-kumbh-sans">Total Patients</h1>
-          <p className="text-3xl font-medium">$78464</p>
+          <p className="text-3xl font-medium">78464</p>
         </div>
       </Flex>
     </div>
