@@ -69,7 +69,7 @@ const DoctorDetaisModal = ({
               maxWidth: 500,
               marginTop: "25px",
             }}
-            initialValues={{title: "Pro.Dr", name: "Dr. Maria Waston", dob: dayjs(new Date('2024-08-31')), experience: "1"}}
+            initialValues={{title: "Pro.Dr", name: "Dr. Maria Waston", dob: dayjs(new Date('2024-08-31')), experience: "1", email: "example@gmail.com"}}
           >
             <div className="flex justify-center rounded-full">
             <Image src={profileImg} alt="defaultImage" className="rounded-full size-28"></Image>
@@ -100,22 +100,28 @@ const DoctorDetaisModal = ({
               </Upload>
             </Form.Item>
 
-            {/*  input  title */}
+            {/*  title */}
             <Form.Item label="Title" name="title">
               <Input name="title" size="large"  placeholder="Enter Doctor Title"></Input>
             </Form.Item>
 
-            {/* input  name  */}
+             {/* email */}
+             <Form.Item label="Email" name="email"  rules={[{ type: "email"}]}>
+              <Input size="large" placeholder="Enter Doctor Title"></Input>
+            </Form.Item>
+
+
+            {/*  name  */}
             <Form.Item label="First & Last name" name="name">
               <Input size="large" defaultValue={"Dr. Maria Waston"} placeholder="Enter Doctor Name"></Input>
             </Form.Item>
 
-            {/* input  Date of birth input  */}
+            {/*   Date of birth input  */}
             <Form.Item label="Date of birth" name="dob">
               <DatePicker/>
             </Form.Item>
 
-            {/* input  Experience  */}
+            {/*  Experience  */}
             <Form.Item
               label="Experience"
               name="experience"
@@ -130,7 +136,7 @@ const DoctorDetaisModal = ({
               </Select>
             </Form.Item>
 
-            {/* input  About Doctor */}
+            {/* About Doctor */}
             <Form.Item label="About Doctor" name="aboutDoc">
               <TextArea rows={3}></TextArea>
             </Form.Item>

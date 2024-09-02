@@ -38,4 +38,7 @@ export const links = [
       label: "Privacy Policy",
     },
   ],
+  {
+    key: "logout",
+  }
 ];

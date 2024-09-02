@@ -92,6 +92,11 @@ const DoctorModal = ({
               <Input size="large" placeholder="Enter Doctor Title"></Input>
             </Form.Item>
 
+            {/*  input  email */}
+            <Form.Item label="Email" name="email"  rules={[{ type: "email",required: true }]}>
+              <Input size="large" placeholder="Enter Doctor Title"></Input>
+            </Form.Item>
+
             {/* input  name  */}
             <Form.Item label="First & Last name" name="name"  rules={[{ required: true, message: "Please enter doctor name" }]}>
               <Input size="large" placeholder="Enter Doctor Name"></Input>

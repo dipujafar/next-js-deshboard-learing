@@ -41,7 +41,7 @@ const EditProfileForm = () => {
           name="userName"
           rules={[{ required: true, message: "Please enter your user name!" }]}
         >
-          <Input />
+          <Input size="large" />
         </Form.Item>
 
         <Form.Item
@@ -55,7 +55,7 @@ const EditProfileForm = () => {
             },
           ]}
         >
-          <Input />
+          <Input  size="large" />
         </Form.Item>
 
         <Form.Item
@@ -68,11 +68,11 @@ const EditProfileForm = () => {
             },
           ]}
         >
-          <Input />
+          <Input size="large"  />
         </Form.Item>
 
         <Form.Item >
-          <Button type="primary" htmlType="submit"  style={{backgroundColor: "#4DB5AD"}} block>
+          <Button type="primary" htmlType="submit"  style={{backgroundColor: "#4DB5AD"}} block size="large">
             Save Changes
           </Button>
         </Form.Item>

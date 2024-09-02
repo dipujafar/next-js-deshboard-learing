@@ -1,4 +1,5 @@
 "use client"
+import { Button } from 'antd';
 import { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
@@ -20,7 +21,10 @@ const TextEditor = () => {
         toolbar:  toolbarOptions
     }
     return (
+        <>
         <ReactQuill modules={module} theme="snow" value={value} onChange={setValue} placeholder='Start writing ......' />
+        <Button size='large' block style={{marginTop: "20px", backgroundColor: "#2B4E63", border: "none", color: "#FDFDFD"}}>Save Changes</Button>
+        </>
     );
 };
 

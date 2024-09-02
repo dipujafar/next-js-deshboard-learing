@@ -6,6 +6,7 @@ import Image from "next/image";
 import logo from "/public/logo.png";
 import { links } from "@/utils/links";
 import Navbar from "../../components/Navbar";
+import { BiLogOutCircle } from "react-icons/bi";
 
 const { Header, Sider, Content } = Layout;
 
@@ -37,7 +38,7 @@ const layout = ({ children }: { children: ReactNode }) => {
             src={logo}
             alt="logo_Image"
             style={{
-              marginTop: "79px",
+              marginTop: "40px",
               marginBottom: "40px",
             }}
           />
@@ -47,66 +48,77 @@ const layout = ({ children }: { children: ReactNode }) => {
           defaultSelectedKeys={["dashboard"]}
           mode="inline"
           className="sidebar-menu"
-          items={links?.map((link) => {
+          items={links.map((link) => {
             let menuItem;
-
-            if (!Array.isArray(link)) {
-              menuItem = {
-                key: link.key,
-                icon: (
-                  <Image
-                    src={link.icon}
-                    alt={link.label}
-                    className={`${
-                      collapsed ? "w-full mr-0" : "w-autor h-auto m-2"
-                    }`}
-                  />
-                ),
-                label: (
-                  <Link href={`/${link.key}`} className={`text-lg`}>
-                    {link.label}
-                  </Link>
-                ),
-              };
-            } else {
-              menuItem = {
-                key: link[0].key,
-                label: <p className="text-lg text-white">{link[0].label}</p>,
-                icon: (
-                  <Image
-                    src={link[0].icon}
-                    alt={link[0].label}
-                    className={`${
-                      collapsed ? "w-full mr-0" : "w-auto h-auto mr-2"
-                    }`}
-                  />
-                ),
-                children: link.slice(1, link.length).map((subLink) => {
-                  let subMenuItem;
-                  subMenuItem = {
-                    key: subLink.key,
+            if (link.key !== "logout") {
+              !Array.isArray(link)
+                ? (menuItem = {
+                    key: link.key,
                     icon: (
                       <Image
-                        src={subLink.icon}
-                        alt={subLink.label}
+                        src={link.icon}
+                        alt={link.label}
                         className={`${
-                          collapsed ? "w-8 h-8 mr-0" : "w-auto h-auto mr-2"
-                        } bg-blend-soft-light`}
+                          collapsed ? "w-full mr-0" : "w-autor h-auto m-2"
+                        }`}
                       />
                     ),
                     label: (
-                      <Link
-                        href={`/${subLink.key}`}
-                        className="text-lg "
-                        style={{ color: "white" }}
-                      >
-                        {subLink.label}
+                      <Link href={`/${link.key}`} className={`text-lg`}>
+                        {link.label}
                       </Link>
                     ),
-                  };
+                  })
+                : (menuItem = {
+                    key: link[0].key,
+                    label: <p className="text-lg text-white">{link[0].label}</p>,
+                    icon: (
+                      <Image
+                        src={link[0].icon}
+                        alt={link[0].label}
+                        className={`${
+                          collapsed ? "w-full mr-0" : "w-auto h-auto mr-2"
+                        }`}
+                      />
+                    ),
+                    children: link.slice(1, link.length).map((subLink) => {
+                      let subMenuItem;
+                      subMenuItem = {
+                        key: subLink.key,
+                        icon: (
+                          <Image
+                            src={subLink.icon}
+                            alt={subLink.label}
+                            className={`${
+                              collapsed ? "w-8 h-8 mr-0" : "w-auto h-auto mr-2"
+                            } bg-blend-soft-light`}
+                          />
+                        ),
+                        label: (
+                          <Link
+                            href={`/${subLink.key}`}
+                            className="text-lg"
+                            style={{ color: "white" }}
+                          >
+                            {subLink.label}
+                          </Link>
+                        ),
+                      };
 
-                  return subMenuItem;
-                }),
+                      return subMenuItem;
+                    }),
+                  });
+            } else {
+              menuItem = {
+                key: "logout",
+                icon: (
+                  <BiLogOutCircle  size={24}/>
+                ),
+                label: (
+                  <Link href="" className="w-full">
+                    <p className="text-lg">Logout</p>
+                  </Link>
+                ),
               };
             }
             return menuItem;

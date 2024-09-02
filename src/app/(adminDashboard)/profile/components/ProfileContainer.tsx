@@ -21,7 +21,7 @@ const ProfileContainer = () => {
           },
         }}
       >
-        <div className="bg-[#243A40] py-10 font-urbanist">
+        <div className="bg-[#243A40] py-8 rounded font-urbanist">
           <div className="bg-[#46A39D] flex items-center justify-center h-[200px]">
             <div className="flex items-center gap-x-5">
               <div className="group relative">

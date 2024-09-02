@@ -39,7 +39,7 @@ const ChangePasswordForm = () => {
             },
           ]}
         >
-          <Input.Password placeholder="Current Password" />
+          <Input.Password size="large" placeholder="Current Password" />
         </Form.Item>
 
         <Form.Item
@@ -47,7 +47,7 @@ const ChangePasswordForm = () => {
           name="newPassword"
           rules={[{ required: true, message: "Please enter a new password!" }]}
         >
-          <Input.Password placeholder="New Password" />
+          <Input.Password size="large" placeholder="New Password" />
         </Form.Item>
 
         <Form.Item
@@ -70,11 +70,11 @@ const ChangePasswordForm = () => {
             }),
           ]}
         >
-          <Input.Password placeholder="Confirm New Password" />
+          <Input.Password size="large" placeholder="Confirm New Password" />
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" style={{backgroundColor: "#4DB5AD"}} htmlType="submit" block>
+          <Button type="primary" style={{backgroundColor: "#4DB5AD"}} htmlType="submit" block size="large">
             Save Changes
           </Button>
         </Form.Item>
