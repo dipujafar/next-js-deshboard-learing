@@ -24,7 +24,7 @@ const NotificationsPage = () => {
       {/* All Notificatios  */}
       <div className="grid grid-cols-1 gap-2  rounded py-5">
         {currentnotifications.map((notification) => (
-          <Flex justify="center">
+          <Flex justify="center" key={notification.id}>
             <Col span={18}>
               <div className="flex gap-4 font-urbanist p-4 border text-white border-[#b9e9e5] rounded">
                 <div className="flex justify-center  items-center gap-8">
