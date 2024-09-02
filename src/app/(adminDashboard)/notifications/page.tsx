@@ -6,7 +6,7 @@ import { IoNotificationsOutline } from "react-icons/io5";
 
 const NotificationsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);  
-    const pageSize = 7; 
+    const pageSize = 6; 
 
       // Calculate start and end index for slicing the doctors data based on the current page and page size
       const startIndex = (currentPage - 1) * pageSize;
