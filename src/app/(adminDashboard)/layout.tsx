@@ -1,5 +1,5 @@
 "use client";
-// @ts-ignore
+
 import { ReactNode, useState } from "react";
 import { Layout, Menu, theme } from "antd";
 import Link from "next/link";
@@ -11,7 +11,7 @@ import { BiLogOutCircle } from "react-icons/bi";
 
 const { Header, Sider, Content } = Layout;
 
-const layout = ({ children }: { children: ReactNode }) => {
+const LayoutPage = ({ children }: { children: ReactNode }) => {
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer, borderRadiusLG },
@@ -58,7 +58,7 @@ const layout = ({ children }: { children: ReactNode }) => {
                     key: link.key,
                     icon: (
                       <Image
-                      //@ts-ignore
+                        //@ts-ignore
                         src={link.icon}
                         //@ts-ignore
                         alt={link.label}
@@ -75,7 +75,9 @@ const layout = ({ children }: { children: ReactNode }) => {
                   })
                 : (menuItem = {
                     key: link[0].key,
-                    label: <p className="text-lg text-white">{link[0].label}</p>,
+                    label: (
+                      <p className="text-lg text-white">{link[0].label}</p>
+                    ),
                     icon: (
                       <Image
                         src={link[0].icon}
@@ -115,9 +117,7 @@ const layout = ({ children }: { children: ReactNode }) => {
             } else {
               menuItem = {
                 key: "logout",
-                icon: (
-                  <BiLogOutCircle  size={24}/>
-                ),
+                icon: <BiLogOutCircle size={24} />,
                 label: (
                   <Link href="" className="w-full">
                     <p className="text-lg">Logout</p>
@@ -158,4 +158,4 @@ const layout = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default layout;
+export default LayoutPage;

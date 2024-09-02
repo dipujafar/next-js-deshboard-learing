@@ -1,9 +1,7 @@
+import React from "react";
 import TextEditor from "@/components/TextEditor";
 
-
-
-
-const page = () => {
+const PrivacyPolicyPage = () => {
     return (
         <div>
            <h1 className="text-2xl text-white font-bold mb-5">Privacy Policy</h1>
@@ -12,4 +10,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default PrivacyPolicyPage;

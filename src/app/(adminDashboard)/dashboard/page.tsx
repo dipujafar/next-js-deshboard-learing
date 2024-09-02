@@ -8,7 +8,7 @@ export const metadata: Metadata = {
    description: "Access the Fetal Med&C Admin Dashboard to oversee healthcare operations, manage patient data, and ensure smooth administration of fetal medicine and care services."
    }
 
-const page = () => {
+const DashboardPage = () => {
     return (
         <div className=" space-y-5">
            <Statatistic></Statatistic>
@@ -20,4 +20,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default DashboardPage;

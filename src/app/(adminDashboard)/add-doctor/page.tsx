@@ -6,10 +6,10 @@ export const metadata: Metadata  = {
     description: "Add new doctors to the Fetal Med&C healthcare system. Enter doctor details, specialties, and credentials to expand the medical team and enhance patient care services."
   };
 
-const page = () => {
+const AddDoctorPage = () => {
     return (
         <AddDoctorContainer></AddDoctorContainer>
     );
 };
 
-export default page;
+export default AddDoctorPage;
