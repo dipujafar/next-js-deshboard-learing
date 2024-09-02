@@ -3,7 +3,7 @@ import { Roboto, Kumbh_Sans, Poppins, Urbanist } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { ConfigProvider} from "antd"
-import antTheme from "@/theme/AntTheme";
+import antTheme from "../theme/antTheme";
 import { Toaster } from "sonner";
 
 // custom fonts
