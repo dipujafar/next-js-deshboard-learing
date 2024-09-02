@@ -1,4 +1,5 @@
 "use client";
+// @ts-ignore
 import { ReactNode, useState } from "react";
 import { Layout, Menu, theme } from "antd";
 import Link from "next/link";
@@ -50,13 +51,16 @@ const layout = ({ children }: { children: ReactNode }) => {
           className="sidebar-menu"
           items={links.map((link) => {
             let menuItem;
+            // @ts-ignore
             if (link.key !== "logout") {
               !Array.isArray(link)
                 ? (menuItem = {
                     key: link.key,
                     icon: (
                       <Image
+                      //@ts-ignore
                         src={link.icon}
+                        //@ts-ignore
                         alt={link.label}
                         className={`${
                           collapsed ? "w-full mr-0" : "w-autor h-auto m-2"
