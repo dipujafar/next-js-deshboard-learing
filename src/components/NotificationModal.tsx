@@ -1,28 +1,10 @@
+import { notifications } from "@/utils/notifications";
 import { Divider } from "antd";
+import Link from "next/link";
 import React from "react";
 import { IoNotificationsOutline } from "react-icons/io5";
 
-// Dummy notification data
-const notifications = [
-  {
-    id: 1,
-    message:
-      "New Appointment has been created With John Doe at 10:20am, 20/11/2023",
-    time: "Fri, 12:30pm",
-  },
-  {
-    id: 2,
-    message:
-      "New Appointment has been created With John Doe at 10:20am, 20/11/2023",
-    time: "Fri, 12:30pm",
-  },
-  {
-    id: 3,
-    message:
-      "New Appointment has been created With John Doe at 10:20am, 20/11/2023",
-    time: "Fri, 12:30pm",
-  },
-];
+
 
 const NotificationModal = () => {
   return (
@@ -32,7 +14,7 @@ const NotificationModal = () => {
       </p>
       <Divider style={{ marginBlock: "14px" }} />
       <div className="space-y-8 text-left w-[90%] mx-auto">
-        {notifications.map((notification) => (
+        {notifications.slice(0,3).map((notification) => (
           <div className="text-start" key={notification.id}>
             <div className="flex items-center gap-x-5">
               <IoNotificationsOutline size={24} color="#2B4E63" />
@@ -44,9 +26,11 @@ const NotificationModal = () => {
           </div>
         ))}
       </div>
+      <Link href={"/notifications"}>
       <button className="bg-secondary-color text-white font-medium px-10 py-2 w-max rounded-lg block mx-auto mt-7">
         Load More
       </button>
+      </Link>
     </div>
   );
 };
