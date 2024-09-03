@@ -149,7 +149,7 @@ const DoctorDetaisModal = ({
               }}
               size="large"
             >
-              Save
+            Save
             </Button>
           </Form>
         </div>
