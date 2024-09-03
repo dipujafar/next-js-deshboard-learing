@@ -124,7 +124,7 @@ const DoctorModal = ({
             </Form.Item>
 
             {/* input  About Doctor */}
-            <Form.Item label="First & Last name" name="name">
+            <Form.Item label="About Doctor" name="aboutDoctor">
               <TextArea rows={3}></TextArea>
             </Form.Item>
 

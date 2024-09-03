@@ -39,7 +39,7 @@ const roboto = Roboto({
 //gobalo metaData
 export const metadata: Metadata = {
   title:{
-    default: "Home | Fetal",
+    default: "Admin Dashboard | Fetal Mad&C",
     template: "%s | Fetal Mad&C"
   },
   description: "This is Official Application for Fetal Med&C",
@@ -52,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} ${kumbh_sans.variable} ${poppins.variable} ${urbanist.variable  }`}>
+      <body className={`${roboto.className} ${kumbh_sans.variable} ${poppins.variable} ${urbanist.variable}`}>
         <AntdRegistry>
         <ConfigProvider theme={antTheme}>
         {children}

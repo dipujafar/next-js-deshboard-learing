@@ -1,5 +1,4 @@
 import { TStateProps } from "@/types/utilsTypes";
-import { UploadOutlined } from "@ant-design/icons";
 import {
   Button,
   ConfigProvider,
@@ -11,7 +10,6 @@ import {
   Upload,
 } from "antd";
 import TextArea from "antd/es/input/TextArea";
-import moment from "moment";
 import Image from "next/image";
 import profileImg from "@/assets/image/defaultProfileImg.png";
 import { MdOutlineEdit } from "react-icons/md";
