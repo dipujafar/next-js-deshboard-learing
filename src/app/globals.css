@@ -45,3 +45,7 @@
   border-radius: 10px;
   overflow: auto !important;
 }
+
+.anticon svg{
+  fill: #fff;
+}

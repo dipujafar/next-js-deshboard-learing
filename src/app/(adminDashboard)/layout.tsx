@@ -119,7 +119,7 @@ const LayoutPage = ({ children }: { children: ReactNode }) => {
                 key: "logout",
                 icon: <BiLogOutCircle size={24} />,
                 label: (
-                  <Link href="" className="w-full">
+                  <Link href="/login" className="w-full">
                     <p className="text-lg">Logout</p>
                   </Link>
                 ),

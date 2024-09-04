@@ -2,6 +2,7 @@
 import type { FormProps } from "antd";
 import { Button, Checkbox, Form, Input, Typography, Flex } from "antd";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type FieldType = {
   email?: string;
@@ -9,15 +10,20 @@ type FieldType = {
   remember?: string;
 };
 
-const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
-  console.log("Success:", values);
-};
+
 
 const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (errorInfo) => {
   console.log("Failed:", errorInfo);
 };
 
 const LoginForm = () => {
+  const route = useRouter();
+
+  const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
+    console.log("Success:", values);
+    route.push("/dashboard")
+  };
+
   return (
     <Form
       name="basic"
